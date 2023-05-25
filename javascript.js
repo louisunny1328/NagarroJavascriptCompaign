@@ -106,9 +106,9 @@ delete c1.car_Model;
 console.log(c1);
 
 */
-
 /*
-//****************** Dot operator and this*********
+
+//****************** Arrow operator and this*********
 class Person {
     constructor(name) {
         this.name = name;
@@ -192,7 +192,7 @@ watchTutorialCallback(message => {
 */
 
 
-
+/*
 
 //***********************Promises**********
 
@@ -234,3 +234,37 @@ watchTutorialPromise().then((message) => {
         console.log(error.name + ' ' + error.message)
 
     })
+    */
+
+
+//************ Taking input from User************
+
+
+
+// Create a function that returns a promise
+function getData() {
+    return new Promise((resolve, reject) => {
+        // Simulating an asynchronous operation
+        setTimeout(() => {
+            const data = 30;
+
+            if (data) {
+                resolve(data); // Promise fulfilled with the data
+            } else {
+                reject('Error: Failed to fetch data'); // Promise rejected with an error message
+            }
+        }, 2000); // Simulating a delay of 2 seconds
+    });
+}
+
+// Using the promise
+getData()
+    .then((data) => {
+        console.log('Data:', data); // Handle the fulfilled promise
+    })
+    .catch((error) => {
+        console.error('Error:', error); // Handle the rejected promise
+    }).finally(() => {
+
+        console.log(`Promise is executed`);
+    });

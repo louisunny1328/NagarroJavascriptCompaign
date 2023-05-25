@@ -3,16 +3,65 @@
 <head>
 
     <title>DOM Manipulation</title>
-    <script src="javascript.js" async>    </script>
+    <script type="text/javascript" async>
+
+
+        function buttonclick1() {
+            alert("Button is clicked");
+
+        }
+        // buttonclick();
+        function buttonclick2() {
+            document.getElementById("id1").innerHTML = "You are IN"
+
+        }
+        function inputText() {
+            var inputText = document.getElementById("input1").value;
+            alert("The value in the text box is" + inputText);
+
+        }
+
+        function radio() {
+            var radioText = document.getElementById("radio1").value;
+            alert("The option selected in the radio is" + radioText);
+        }
+
+        function selectbox() {
+
+            var selectedOption = document.getElementById("select 1");
+
+            alert(selectedOption.options[selectedOption.selectedIndex].value);
+        }
+    </script>
+
 
 </head>
 
 <body>
 
-    <div>
 
-        <span>Hello</span>
-    </div>
+
+
+    <h1 id="id1">"Hello how are you"</h1>
+
+
+
+
+    <input id="radio1" type="radio" name="name1" value="Option 1"> click here for option one<br>
+
+    <input id="radio2" type="radio" name="name2" value="Option 2"> click here for option two<br>
+
+    <select id="select 1">
+        <option value="value1">SelectOtion1</option>
+        <option value="value 2">SelectOtion2</option>
+        <option value="value 3">SelectOtion3</option>
+    </select>
+    <button onclick="selectbox()">Click Here</button>
+</body>
+
+
+
+
 
 
 </body>
