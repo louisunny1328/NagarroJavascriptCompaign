@@ -1,0 +1,51 @@
+<html>
+
+
+<head>
+    <title> DOM Manipulation 3</title>
+
+    <script type="text/javascript">
+
+        function validate() {
+            var user = document.getElementById("username");
+            var pass = document.getElementById("password");
+            if (user.value.trim() == "") {
+
+
+                alert("Username  cant be blank")
+                user.style.border = "solid 3px red";
+                document.getElementById("usrLabel").style.visibility = "visible";
+                return false;
+
+            }
+            else if (pass.value.trim() == "") {
+
+
+                alert("Password  cant be blank");
+                pass.style.border = "solid 3px red";
+                document.getElementById("passLabel").style.visibility = "visible";
+                return false;
+
+            }
+            else {
+                true;
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <form onsubmit="return validate();" action="DomManipulation2.html">
+        <input id="username" placeholder="Enter Username">
+        <label id="usrLabel" style="color:red; visibility: hidden; "> Invlaid Username</label><br>
+
+        <input id="password" placeholder="Enter Password" type="password">
+        <label id="passLabel" style="color:red; visibility: hidden; "> Invlaid Password</label><br>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

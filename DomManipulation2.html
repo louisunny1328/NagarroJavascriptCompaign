@@ -1,0 +1,27 @@
+<html>
+
+<head>
+
+    <title>DOM Manipulation</title>
+    <script type="text/javascript" async>
+        function tagname() {
+            var tags = document.getElementsByClassName("class1");
+            for (var x = 0; x < tags.length; x++)
+                tags[x].style.fontSize = 50;
+        }
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <p class="class1"> Paragraph 1</p>
+    <p class="class1">Paragraph 2</p>
+    <p class="class1">Paragraph 3</p>
+    <button onclick="tagname()"> Click Here
+</body>
+
+</html>

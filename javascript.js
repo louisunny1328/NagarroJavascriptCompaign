@@ -246,7 +246,7 @@ function getData() {
     return new Promise((resolve, reject) => {
         // Simulating an asynchronous operation
         setTimeout(() => {
-            const data = 30;
+            const data = undefined;
 
             if (data) {
                 resolve(data); // Promise fulfilled with the data

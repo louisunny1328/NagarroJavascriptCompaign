@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Email Validation</title>
+    <script type="text/javascript">
+
+        function validateEmail() {
+
+            var regex = /^[a-z0-9\.-]+@[a-z]+\.[a-z]{2,3}(\.[a-z]{2,3})?$/
+            var email = document.getElementById("email").value;
+            var label = document.getElementById("label");
+
+            if (regex.test(email)) {
+                label.style.color = "green";
+                label.style.visibility = "visible";
+                label.innerHTML = "Valid email"
+
+            }
+
+            else {
+
+                label.style.color = "red";
+                label.style.visibility = "visible";
+                label.innerHTML = "InValid email"
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <input id="email" placeholder="Enter email">
+    <label id="label" style="color: red; visibility:hidden">Invalid Email</label>
+    <button id="button" onclick="validateEmail()" type="button">Click here</button>
+</body>
+
+
+</html>

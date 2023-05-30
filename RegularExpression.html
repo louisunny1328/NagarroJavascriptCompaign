@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+    <title>Regular Expression</title>
+
+
+    <script type="text/javascript">
+
+        function validate() {
+
+            var regex = /EOO/i;
+            var username = document.getElementById("username").value;
+            if (regex.test(username)) {
+                alert("Valid Username")
+
+            }
+            else {
+                alert("Invalid Username")
+            }
+        }
+    </script>
+
+</head>
+
+
+<body>
+    <form action=DOMManipulation3.html>
+        <input id="username" placeholder="Enter Username">
+        <button onclick="validate()" type="button">Submit</button>
+
+    </form>
+
+</body>
+
+</html>

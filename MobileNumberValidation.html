@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+
+    <title>Mobile Number Validation</title>
+    <script type="text/javascript">
+
+
+        function mobileValidate() {
+            var regex = /^[7-9]\d{9}$/;
+            var mobile = document.getElementById("mobile").value;
+            var label = document.getElementById("label");
+            if (regex.test(mobile)) {
+
+                label.innerHTML = "Valid"
+                label.style.visibility = "visible";
+                label.style.color = "green"
+            }
+            else {
+
+
+                label.innerText = "InValid";
+                label.style.visibility = "visible";
+                label.style.color = "red"
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input id="mobile" placeholder="Enter Mobile Number">
+
+    <label id="label" style="color:red ;visibility:hidden">Invalid Mobile Number</label><br>
+    <button onclick="mobileValidate();" type="button">Click Here</button>
+</body>
+
+</html>
